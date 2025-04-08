@@ -3,7 +3,10 @@
 #include "StarFormat.hpp"
 
 #include <fstream>
-#include <pthread.h>
+
+#if defined(__linux__) || defined(__APPLE__)
+    #include <pthread.h>
+#endif
 
 namespace Star {
 
